@@ -20,17 +20,13 @@ public class Kamera {
         return "Diperbaiki";
     }
 
-    public void updateStatus(){
-        this.statusRusak = false;
-    }
 
     @Override
     public String toString() {
         return """
-                Nama: %s
+                Nama kamera: %s
                 Kerusakan: %s
                 Status: %s
-                Pemilik: %s
-                """.formatted(this.nama, this.kerusakan, this.getStatus(), this.pemilik.getNama());
+                Pemilik: %s""".formatted(this.nama, this.kerusakan, this.getStatus(), this.pemilik.getNama());
     }
 }
