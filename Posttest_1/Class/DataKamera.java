@@ -25,6 +25,7 @@ public class DataKamera {
                 System.out.println(kamera);
                 i++;
             }
+                System.out.println("--------------------------------");
         }
     }
 
@@ -71,7 +72,7 @@ public class DataKamera {
         idxTemp = br.readLine();
 
         if(!cekIndex(idxTemp)){
-            System.out.println("input harus berupa angka");
+            System.out.println("Index harus berupa angka");
             return -1;
         }
 
@@ -98,6 +99,7 @@ public class DataKamera {
         Kamera kameraTemp = new Kamera(namaKamera, kerusakan, buatCostumer());
 
         kameraList.set(idx-1, kameraTemp);
+        System.out.println("Kamera berhasil diedit");
     }
 
     public void hapusKamera() throws IOException {
