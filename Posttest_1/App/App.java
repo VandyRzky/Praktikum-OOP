@@ -37,10 +37,10 @@ public class App {
                     dataKamera.lihatKamera();
                     break;
                 case "3":
-                    dataKamera.pilihIndexKamera(1);
+                    dataKamera.editKamera();
                     break;
                 case "4":
-                    dataKamera.pilihIndexKamera(2);
+                    dataKamera.hapusKamera();
                     break;
                 case "5":
                     return;

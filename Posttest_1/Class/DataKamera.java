@@ -58,12 +58,12 @@ public class DataKamera {
         }
     }
 
-    public void pilihIndexKamera(int menu) throws  IOException{
+    public int pilihIndexKamera() throws  IOException{
         int idx;
         String idxTemp;
         if(kameraList.isEmpty()){
             System.out.println("Belum ada data kamera");
-            return;
+            return -1;
         }
         lihatKamera();
 
@@ -72,23 +72,21 @@ public class DataKamera {
 
         if(!cekIndex(idxTemp)){
             System.out.println("input harus berupa angka");
-            return;
+            return -1;
         }
 
         idx = Integer.parseInt(idxTemp);
 
         if(idx <=0 || idx > kameraList.size()){
             System.out.println("Index kamera tidak ada");
-            return;
+            return -1;
         }
-        if(menu == 1){
-            editKamera(idx);
-        }else if(menu == 2){
-            hapusKamera(idx);
-        }
+        return idx;
     }
 
-    public void editKamera(int idx) throws IOException{
+    public void editKamera() throws IOException{
+        int idx = pilihIndexKamera();
+        if(idx < 0)return;
         String namaKamera;
         String kerusakan;
 
@@ -102,7 +100,9 @@ public class DataKamera {
         kameraList.set(idx-1, kameraTemp);
     }
 
-    public void hapusKamera(int idx){
+    public void hapusKamera() throws IOException {
+        int idx = pilihIndexKamera();
+        if(idx < 0)return;
         kameraList.remove(idx-1);
         System.out.println("Kamera berhasil dihapus");
     }
