@@ -1,9 +1,8 @@
 package Posttest_3.Class;
 
+public class Lensa extends Barang {
 
-public class Kamera extends Barang {
-
-    public Kamera (String nama, String kerusakan, Costumer pemilik){
+    public Lensa (String nama, String kerusakan, Costumer pemilik){
         super(nama, kerusakan, pemilik);
     }
 
@@ -14,7 +13,6 @@ public class Kamera extends Barang {
     public void setStatus(){
         super.setStatus();
     }
-
 
     @Override
     public String toString() {
