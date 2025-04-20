@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class DataBarang <T> extends DataBarangInt{
-    protected ArrayList<T> barangList = new ArrayList<>();
+    protected final ArrayList<T> barangList = new ArrayList<>();
 
     InputStreamReader isr = new InputStreamReader(System.in);
     BufferedReader br = new BufferedReader(isr);
